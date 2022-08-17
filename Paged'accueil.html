@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="public/css/style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -26,31 +29,43 @@
 
         <!-- INTRO -->
 
-        <div>
-            <H1> 
+        <div class="section-intro">
+            <H1 class="section-intro__titre displayflex"> 
                 Réservez le menu qui vous convient
             </H1>
-            <p>
+            <p class="section-intro__p displayflex">
                 Découvrez des restaurants d'exception, séléctionés par nos soins.
             </p> 
-            <button class="explorez" onclick="" type="button"> Explorer nos restaurants 
+            <button class="section-intro__button" onclick="" type="button"> Explorer nos restaurants 
             </button>
         </div>
 
         <!-- LISTE FONCTIONNEMENT  -->
 
-        <div>
-            <h2> 
-                FONCTIONNEMENT 
+        <div class="fonctionnement">
+            <h2 class="fonctionnement__title"> 
+                Fonctionnement 
             </h2>
-            <ol>
+            <ol class="fonctionnement__list">
                 <li>
+                    <span class="fonctionnement__list__num">
+                        1
+                    </span>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                     Choisissez un restaurant
                 </li>
                 <li>
+                    <span class="fonctionnement__list__num">
+                        2
+                    </span>
+                    <i class="fa-solid fa-list-ul"></i>
                     Composez votre menu
                 </li>
                 <li>
+                    <span class="fonctionnement__list__num">
+                        3
+                    </span>
+                    <i class="fa-solid fa-store"></i>
                     Dégustez au restaurant
                 </li>
             </ol>

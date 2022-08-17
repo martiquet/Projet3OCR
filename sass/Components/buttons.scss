@@ -1,0 +1,9 @@
+.section-intro__button {
+    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    border-radius: 25px;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    margin: 25px 0 45px 0;
+    @include  box-shadow;
+}
