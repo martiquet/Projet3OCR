@@ -1,8 +1,12 @@
 @mixin box-shadow {
-    box-shadow: 0em .5em 0.8em rgba(73, 73, 73, 0.425);
+    box-shadow: 0em .3em 0.7em rgba(73, 73, 73, 0.425);
 }
 
-
+@mixin hover-bright {
+    transition: ease .5s;
+    filter: brightness(120%);
+    box-shadow: 0em .4em 0.3em rgba(32, 32, 32, 0.425);
+}
 @mixin heartfull {
 
     background: purple;
@@ -38,3 +42,4 @@
     transition: .3s;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
 }
+

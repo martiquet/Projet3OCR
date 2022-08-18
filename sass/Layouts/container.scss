@@ -51,8 +51,11 @@
     padding: 25px 0;
     border-radius: 25px;
     font-weight: 700;
-    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.16);
+    @include  box-shadow;
     margin-left: 10px;
+        &:hover {
+            @include hover-bright;
+        }
        
 }
 
@@ -89,11 +92,12 @@
 
 .restobox {
     width: 100%;
-    height: 250px;
+    height: 260px;
     background: white;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.16);
     margin-bottom: 20px;
+    position: relative;
     
     
     
@@ -105,7 +109,29 @@
             border-radius: 15px 15px 0 0;
             display: flex;
             align-items: center;
-            padding-bottom: 50px;
+
+            img {
+                padding-bottom: 60px;
+            }
+
+                &--new {
+                    display: flex;
+                    position: absolute;
+                    background: #99e2d0;
+                    top: 20px; right: 20px;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+
+                    p {
+                        font-weight: 500;
+                        color: #1b6150;;
+                    }
+                }
+
+
+          
+          
+            
         }
 
         &__txtheart {
@@ -121,5 +147,35 @@
 .restobox__img img {
     width: 100%;
     object-fit: cover;
+    
+}
+
+// RESTO
+
+
+.backgroundmain {
+    display: flex;
+    height: 270px;
+    width: 100%;
+    position: absolute;
+    
+    
+    
+ 
+
+   
+}
+
+
+
+.menu {
+    z-index: 1;
+    background-color: #F6F6F6;
+    border-radius: 50px 50px 0 0;
+    padding-top: -200px;
+
+    
+    
+    
     
 }
