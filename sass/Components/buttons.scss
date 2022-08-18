@@ -1,14 +1,5 @@
 .section-intro__button {
-    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    border-radius: 25px;
-    border: none;
-    padding: 15px 20px;
-    color: white;
-    margin: 25px 0 45px 0;
-    @include  box-shadow;
-        &:hover {
-            @include hover-bright;
-        }
+    @include btnradiant;
 }
 
 .icon {
@@ -79,25 +70,28 @@
       stroke: transparent;
     }
   }
-  
-@keyframes fade-animation {
-    70% {
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: url(#grad1);
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(2.5);
-      opacity: 0;
-    }
+
+  .retour {
+    position: absolute;
+    left: 25px;
+
+      i {
+        font-size: 25px;
+      }
+    
   }
+
+
+  .btncommander {
+    margin-top: 25px;
+    @include btnradiant;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+  }
+  
+
+  
 
 
   

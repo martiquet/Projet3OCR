@@ -1,3 +1,11 @@
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-50px);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,12 +39,12 @@ ul, ol {
   padding: 15px 20px;
   color: white;
   margin: 25px 0 45px 0;
-  box-shadow: 0em 0.3em 0.7em rgba(73, 73, 73, 0.425);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.7);
 }
 .section-intro__button:hover {
   transition: ease 0.5s;
   filter: brightness(120%);
-  box-shadow: 0em 0.4em 0.3em rgba(32, 32, 32, 0.425);
+  box-shadow: 1px 1px 7px 0px rgba(12, 12, 12, 0.877);
 }
 
 .icon {
@@ -98,24 +106,32 @@ ul, ol {
     stroke: transparent;
   }
 }
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: url(#grad1);
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
+.retour {
+  position: absolute;
+  left: 25px;
 }
+.retour i {
+  font-size: 25px;
+}
+
+.btncommander {
+  margin-top: 25px;
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border-radius: 25px;
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  margin: 25px 0 45px 0;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.7);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.btncommander:hover {
+  transition: ease 0.5s;
+  filter: brightness(120%);
+  box-shadow: 1px 1px 7px 0px rgba(12, 12, 12, 0.877);
+}
+
 .headerlogo {
   display: flex;
   justify-content: center;
@@ -203,13 +219,13 @@ footer ul li {
   padding: 25px 0;
   border-radius: 25px;
   font-weight: 700;
-  box-shadow: 0em 0.3em 0.7em rgba(73, 73, 73, 0.425);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.7);
   margin-left: 10px;
 }
 .fonctionnement__list li:hover {
   transition: ease 0.5s;
   filter: brightness(120%);
-  box-shadow: 0em 0.4em 0.3em rgba(32, 32, 32, 0.425);
+  box-shadow: 1px 1px 7px 0px rgba(12, 12, 12, 0.877);
 }
 
 .fonctionnement__list i {
@@ -288,14 +304,120 @@ footer ul li {
   display: flex;
   height: 270px;
   width: 100%;
-  position: absolute;
+}
+
+.backgroundmain img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-menu {
+  background-color: #f6f6f6;
 }
 
 .menu {
   z-index: 1;
   background-color: #F6F6F6;
-  border-radius: 50px 50px 0 0;
-  padding-top: -200px;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+}
+.menu .title-heart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 35px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.menu .title-heart h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+.menu .menu-all {
+  width: 100%;
+}
+.menu h3 {
+  font-weight: 400;
+  padding-bottom: 3px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.menu h3:after {
+  display: flex;
+  content: "";
+  width: 35px;
+  border-bottom: 3.5px solid #99e2d0;
+}
+.menu .boxmenu {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  margin: 5% 0;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.7);
+}
+.menu .boxmenu__txt {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 0 0 15px;
+  justify-content: center;
+  gap: 5px;
+  width: 60%;
+  overflow: hidden;
+}
+.menu .boxmenu__txt h4 {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu .boxmenu__txt p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.menu .boxmenu__prix {
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  width: 50px;
+  margin-right: 10px;
+  height: 100%;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+.menu .boxmenu__check {
+  display: none;
+}
+.menu .boxmenu__check .fa-circle-check {
+  font-size: 18px;
+}
+.menu .boxmenu:hover .boxmenu__prix {
+  animation: slide-left 0.5s ease;
+  transform-origin: right;
+}
+.menu .boxmenu:hover .boxmenu__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #99e2d0;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  width: 45px;
+  color: white;
+  animation: slide-left 0.5s ease;
+  transform-origin: right;
 }
 
 /*# sourceMappingURL=style.css.map */

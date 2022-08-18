@@ -1,11 +1,11 @@
 @mixin box-shadow {
-    box-shadow: 0em .3em 0.7em rgba(73, 73, 73, 0.425);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.7);
 }
 
 @mixin hover-bright {
     transition: ease .5s;
     filter: brightness(120%);
-    box-shadow: 0em .4em 0.3em rgba(32, 32, 32, 0.425);
+    box-shadow: 1px 1px 7px 0px rgba(12, 12, 12, 0.877);
 }
 @mixin heartfull {
 
@@ -43,3 +43,32 @@
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
 }
 
+@mixin menu-border {
+    display: flex;
+    content: "";
+    width: 35px;
+    border-bottom: 3.5px solid $tertiary-color;
+}
+
+@keyframes slide-left {
+    0% {
+              transform: scaleX(0);
+    }
+    100% {
+              transform: scaleX(-50px);
+    }
+  }
+
+@mixin btnradiant {
+    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    border-radius: 25px;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    margin: 25px 0 45px 0;
+    @include  box-shadow;
+        &:hover {
+            @include hover-bright;
+        }
+    
+}
