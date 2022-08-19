@@ -236,6 +236,7 @@
                 border-radius: 10px;
                 @include box-shadow;
                 max-width: 311px;
+                min-width: 311px;
 
                 &__txt {
                     display: flex;
