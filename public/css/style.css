@@ -268,6 +268,9 @@ footer #shrikhand {
 footer ul li {
   margin-bottom: 10px;
 }
+footer a {
+  color: white;
+}
 
 .fa-utensils, .fa-handshake-angle {
   margin-right: 5px;
