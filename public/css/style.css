@@ -371,6 +371,13 @@ footer ul li {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1000px) {
+  .resto__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .restobox {
   width: 100%;
@@ -380,6 +387,11 @@ footer ul li {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.16);
   margin-bottom: 20px;
   position: relative;
+}
+@media screen and (min-width: 1000px) {
+  .restobox {
+    max-width: 910px;
+  }
 }
 .restobox__img {
   max-height: 190px;
