@@ -105,4 +105,88 @@
     
     
  }
+
+ .loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.90);
+  animation: loader 0.05s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  
+}
+
+.colorful {
+  width: 24.6px;
+  height: 24.6px;
+  border-radius: 50%;
+  background: #9356dc;
+  animation: colorful-o7soaomd 1.7999999999999998s infinite linear;
+}
+
  
+@keyframes colorful-o7soaomd {
+  0% {
+     box-shadow: 0 -33.6px #ff79da, calc(33.6px*0.707) calc(-33.6px*0.707) #99e2d0,33.6px 0 #ff79da, 0 0 #99e2d0,
+               0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0;
+  }
+
+  12.5% {
+     box-shadow: 0 0 #ff79da, calc(33.6px*0.707) calc(-33.6px*0.707) #99e2d0,33.6px 0 #ff79da, calc(33.6px*0.707) calc(33.6px*0.707) #99e2d0,
+               0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0;
+  }
+
+  25% {
+     box-shadow: 0 0 #ff79da, 0 0 #99e2d0,33.6px 0 #ff79da, calc(33.6px*0.707) calc(33.6px*0.707) #99e2d0,
+               0 33.6px #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0;
+  }
+
+  37.5% {
+     box-shadow: 0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, calc(33.6px*0.707) calc(33.6px*0.707) #99e2d0,
+               0 33.6px #ff79da, calc(-33.6px*0.707) calc(33.6px*0.707) #99e2d0,0 0 #ff79da, 0 0 #99e2d0;
+  }
+
+  50% {
+     box-shadow: 0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0,
+               0 33.6px #ff79da, calc(-33.6px*0.707) calc(33.6px*0.707) #99e2d0,-33.6px 0 #ff79da, 0 0 #99e2d0;
+  }
+
+  62.5% {
+     box-shadow: 0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0,
+               0 0 #ff79da, calc(-33.6px*0.707) calc(33.6px*0.707) #99e2d0,-33.6px 0 #ff79da, calc(-33.6px*0.707) calc(-33.6px*0.707) #99e2d0;
+  }
+
+  75% {
+     box-shadow: 0 -33.6px #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0,
+               0 0 #ff79da, 0 0 #99e2d0,-33.6px 0 #ff79da, calc(-33.6px*0.707) calc(-33.6px*0.707) #99e2d0;
+  }
+
+  87.5% {
+     box-shadow: 0 -33.6px #ff79da, calc(33.6px*0.707) calc(-33.6px*0.707) #99e2d0,0 0 #ff79da, 0 0 #99e2d0,
+               0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, calc(-33.6px*0.707) calc(-33.6px*0.707) #99e2d0;
+  }
+
+  100% {
+     box-shadow: 0 -33.6px #ff79da, calc(33.6px*0.707) calc(-33.6px*0.707) #99e2d0,33.6px 0 #ff79da, 0 0 #99e2d0,
+               0 0 #ff79da, 0 0 #99e2d0,0 0 #ff79da, 0 0 #99e2d0;
+  }
+}
+
+@keyframes animenu {
+  0%{
+    transform: translateY(-250px);
+  
+  }
+  100%{
+    transform: translateY(0px);
+  }
+
+}

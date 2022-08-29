@@ -188,6 +188,11 @@
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
+
+    .menu-box {
+        overflow: hidden;
+    }
+   
     
     }
 
@@ -204,11 +209,17 @@
                     font-weight: 500;
                     font-size: 30px;
                 }
+
+        
             
            
         }
 
     .menu-all {
+
+        animation: animenu 1s;
+        animation-fill-mode: both;
+        overflow: hidden;
         
     
 
@@ -302,8 +313,8 @@
             &:hover {
 
                 .boxmenu__prix {
-                    animation: slide-left 0.5s ease ;
-                    transform-origin: right;
+                    animation: slide-left2 0.5s ease;
+                    transform-origin: right;  
                 }
                 
                 .boxmenu__check {

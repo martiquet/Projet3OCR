@@ -59,6 +59,15 @@
     }
   }
 
+@keyframes slide-left2 {
+   0% {
+    transform: translateX(50px);
+   }
+    100% {
+    transform: translateX(0px);
+    }
+}
+
 @mixin btnradiant {
     background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
     border-radius: 25px;

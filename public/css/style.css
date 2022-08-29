@@ -1,9 +1,45 @@
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes slide-left {
   0% {
     transform: scaleX(0);
   }
   100% {
     transform: scaleX(-50px);
+  }
+}
+@keyframes slide-left2 {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 * {
@@ -144,6 +180,67 @@ ul, ol {
   right: 50%;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.05s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorful {
+  width: 24.6px;
+  height: 24.6px;
+  border-radius: 50%;
+  background: #9356dc;
+  animation: colorful-o7soaomd 1.8s infinite linear;
+}
+
+@keyframes colorful-o7soaomd {
+  0% {
+    box-shadow: 0 -33.6px #ff79da, 23.7552px -23.7552px #99e2d0, 33.6px 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
+  }
+  12.5% {
+    box-shadow: 0 0 #ff79da, 23.7552px -23.7552px #99e2d0, 33.6px 0 #ff79da, 23.7552px 23.7552px #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
+  }
+  25% {
+    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 33.6px 0 #ff79da, 23.7552px 23.7552px #99e2d0, 0 33.6px #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
+  }
+  37.5% {
+    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 23.7552px 23.7552px #99e2d0, 0 33.6px #ff79da, -23.7552px 23.7552px #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
+  }
+  50% {
+    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 33.6px #ff79da, -23.7552px 23.7552px #99e2d0, -33.6px 0 #ff79da, 0 0 #99e2d0;
+  }
+  62.5% {
+    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, -23.7552px 23.7552px #99e2d0, -33.6px 0 #ff79da, -23.7552px -23.7552px #99e2d0;
+  }
+  75% {
+    box-shadow: 0 -33.6px #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, -33.6px 0 #ff79da, -23.7552px -23.7552px #99e2d0;
+  }
+  87.5% {
+    box-shadow: 0 -33.6px #ff79da, 23.7552px -23.7552px #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, -23.7552px -23.7552px #99e2d0;
+  }
+  100% {
+    box-shadow: 0 -33.6px #ff79da, 23.7552px -23.7552px #99e2d0, 33.6px 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
+  }
+}
+@keyframes animenu {
+  0% {
+    transform: translateY(-250px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .headerlogo {
   display: flex;
   justify-content: center;
@@ -345,6 +442,9 @@ footer ul li {
   align-items: center;
   padding: 0 5%;
 }
+.menu .menu-box {
+  overflow: hidden;
+}
 
 .title-heart {
   display: flex;
@@ -360,6 +460,11 @@ footer ul li {
   font-size: 30px;
 }
 
+.menu-all {
+  animation: animenu 1s;
+  animation-fill-mode: both;
+  overflow: hidden;
+}
 .menu-all h3 {
   font-weight: 400;
   padding-bottom: 3px;
@@ -424,7 +529,7 @@ footer ul li {
   font-size: 18px;
 }
 .boxmenu:hover .boxmenu__prix {
-  animation: slide-left 0.5s ease;
+  animation: slide-left2 0.5s ease;
   transform-origin: right;
 }
 .boxmenu:hover .boxmenu__check {
