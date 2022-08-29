@@ -200,6 +200,8 @@
     background-color: #f6f6f6;
 }
 
+// MENU
+
 .menu {
     z-index: 1;
     background-color: #F6F6F6;
@@ -223,6 +225,23 @@
             flex-direction: row;
 
     }
+        .entrées {
+        animation: animenu 1s;
+        animation-fill-mode: both;
+        }
+
+        .plats {
+        animation: animenu 1s;
+        animation-fill-mode: both;
+        animation-delay: .5s;
+
+        }
+
+        .desserts {
+        animation: animenu 1s;
+        animation-fill-mode: both;
+        animation-delay: 1s;
+        }
 }
    
     
@@ -250,8 +269,7 @@
 
     .menu-all {
 
-        animation: animenu 1s;
-        animation-fill-mode: both;
+
         overflow: hidden;
         display: flex;
         flex-direction: column;

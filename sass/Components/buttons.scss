@@ -108,13 +108,13 @@
 
  .loader {
   position: fixed;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.90);
   animation: loader 0.05s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: both;
   z-index: 10000;
   display:flex;
@@ -125,11 +125,12 @@
 }
 
 .colorful {
+  top: 50%;
   width: 24.6px;
   height: 24.6px;
   border-radius: 50%;
   background: #9356dc;
-  animation: colorful-o7soaomd 1.7999999999999998s infinite linear;
+  animation: colorful-o7soaomd 2s infinite linear;
 }
 
  
@@ -182,9 +183,23 @@
 
 @keyframes animenu {
   0%{
-    transform: translateY(-250px);
-  
+    transform: translateY(150px);
+    opacity: 0;
   }
+
+  20%{
+    opacity: 0.2;
+  }
+
+  40%{
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+  
+  
   100%{
     transform: translateY(0px);
   }

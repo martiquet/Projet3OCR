@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -182,13 +183,13 @@ ul, ol {
 
 .loader {
   position: fixed;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
   animation: loader 0.05s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
@@ -197,11 +198,12 @@ ul, ol {
 }
 
 .colorful {
+  top: 50%;
   width: 24.6px;
   height: 24.6px;
   border-radius: 50%;
   background: #9356dc;
-  animation: colorful-o7soaomd 1.8s infinite linear;
+  animation: colorful-o7soaomd 2s infinite linear;
 }
 
 @keyframes colorful-o7soaomd {
@@ -235,7 +237,17 @@ ul, ol {
 }
 @keyframes animenu {
   0% {
-    transform: translateY(-250px);
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
   }
   100% {
     transform: translateY(0px);
@@ -475,6 +487,20 @@ footer a {
     flex-direction: row;
   }
 }
+.menu .menu-box .entrées {
+  animation: animenu 1s;
+  animation-fill-mode: both;
+}
+.menu .menu-box .plats {
+  animation: animenu 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+.menu .menu-box .desserts {
+  animation: animenu 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
 .menu .title-heart {
   display: flex;
   flex-direction: row;
@@ -490,8 +516,6 @@ footer a {
 }
 
 .menu-all {
-  animation: animenu 1s;
-  animation-fill-mode: both;
   overflow: hidden;
   display: flex;
   flex-direction: column;
