@@ -547,6 +547,12 @@ footer a {
   max-width: 320px;
   min-width: 320px;
 }
+@media screen and (max-width: 410px) {
+  .boxmenu {
+    max-width: 250px;
+    min-width: 250px;
+  }
+}
 .boxmenu__txt {
   display: flex;
   flex-direction: column;
