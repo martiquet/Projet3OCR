@@ -40,15 +40,20 @@
 .fonctionnement {
     padding-top: 40px;
     margin: 0 5% 70px;
+    
+    
         &__title {
             margin-bottom: 20px;
         }
         &__list {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
+        
 }
+
 
 .fonctionnement__list li{
     background-color: #f6f6f6;
@@ -188,13 +193,23 @@
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
+    
 
     .menu-box {
+
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width:1000px) {
+            display: flex;
+            flex-direction: row;
+
     }
+}
    
     
-    }
+    
 
         .title-heart {
             display: flex;
@@ -214,12 +229,16 @@
             
            
         }
+    }
 
     .menu-all {
 
         animation: animenu 1s;
         animation-fill-mode: both;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
     
 
@@ -228,6 +247,7 @@
                 padding-bottom: 3px;
                 font-size: 14px;
                 margin-top: 20px;
+                width: 100%;
 
                 &:after {
                     @include menu-border;
@@ -241,13 +261,13 @@
                 display: flex;
                 flex-direction: row;
                 cursor: pointer;
-                margin: 5% 0;
+                margin: 5% 25px;
                 height: 50px;
                 background-color: white;
-                border-radius: 10px;
+                border-radius: 15px;
                 @include box-shadow;
-                max-width: 311px;
-                min-width: 311px;
+                max-width: 320px;
+                min-width: 320px;
 
                 &__txt {
                     display: flex;
@@ -341,12 +361,9 @@
 
     
     @media screen and (min-width:1000px) {
-        .menu-box {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width:90%
-        }
+
+        
+        
         .backgroundmain {
             display: flex;
             height: 370px;
@@ -354,9 +371,22 @@
                 
         }
 
-        .boxmenu {
-            min-width: 311px;
+
+        .fonctionnement__list {
+            display: flex;
+            flex-direction: row;
+             li {
+                margin-right: 15px;
+             }
+            
         }
+
+        .menu-all {
+            width: auto;
+        }
+
+
+        
     }
     
     
