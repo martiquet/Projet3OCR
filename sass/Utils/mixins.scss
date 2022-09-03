@@ -1,11 +1,16 @@
 @mixin box-shadow {
-    box-shadow: 0px 7px 17px -5px rgba(0,0,0,0.53);
+    box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.53);
 }
 
 @mixin hover-bright {
     transition: ease .5s;
     filter: brightness(120%);
     box-shadow: 0px 14px 13px 0px rgba(0,0,0,0.85);
+}
+
+@mixin hover-purple  {
+    background-color: #F5EDFF;
+    
 }
 @mixin heartfull {
 
@@ -80,4 +85,14 @@
             @include hover-bright;
         }
     
+}
+
+@keyframes check-rotate {
+    0% {
+       transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }

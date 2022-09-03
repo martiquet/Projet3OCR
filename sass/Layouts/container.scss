@@ -39,7 +39,7 @@
 
 .fonctionnement {
     padding-top: 40px;
-    margin: 0 5% 70px;
+    margin: 0 2% 70px;
     
     
         &__title {
@@ -62,11 +62,12 @@
     border-radius: 25px;
     font-weight: 700;
     @include  box-shadow;
-    margin-left: 10px;
-    max-width: 330px;
-    min-width: 300px;
+    
+    width: 95%;
+   
+    
         &:hover {
-            @include hover-bright;
+            @include hover-purple;
         }
        
 }
@@ -91,7 +92,7 @@
 
 .resto {
     background-color: #f6f6f6;
-    padding: 0 5%;
+    padding: 0 2%;
         &__titre {
             padding-top: 50px;
             margin-bottom: 25px;
@@ -211,7 +212,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 2%;
     
 
     .menu-box {
@@ -220,9 +221,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         @media screen and (min-width:1000px) {
             display: flex;
             flex-direction: row;
+
+            
 
     }
         .entrées {
@@ -274,7 +278,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        width: 100%;
+
+           .listemenu {
+            width: 100%;
+            align-items: center;
+
+           }
     
 
             h3 {
@@ -291,24 +301,21 @@
         }
         
 
-        
+
+
 .boxmenu {
                 display: flex;
                 flex-direction: row;
+               
                 cursor: pointer;
-                margin: 5% 25px;
+                margin: 5% 0;
                 height: 50px;
                 background-color: white;
-                border-radius: 15px;
+                border-radius: 10px;
                 @include box-shadow;
-                max-width: 320px;
-                min-width: 320px;
+                width: 100%;
 
-                @media screen and (max-width:410px) {
-                    max-width: 250px;
-                    min-width: 250px;
-                    
-                }
+            
 
                 &__txt {
                     display: flex;
@@ -359,11 +366,6 @@
                         font-size: 18px;
                         
                         
-                        
-                        
-                        
-                        
-                        
                     }
 
                 
@@ -389,7 +391,10 @@
                     width: 45px;
                     color: white;
                     animation: slide-left 0.5s ease ;
-                    transform-origin: right;                   
+                    transform-origin: right;  
+                        .fa-circle-check {
+                            animation: check-rotate 0.5s ease;
+                        }                 
                     
                 }
         
@@ -412,21 +417,28 @@
                 
         }
 
-
+        .menu-box {
+            display: flex;
+            justify-content: space-around;
+        }
         .fonctionnement__list {
             display: flex;
             flex-direction: row;
+            
              li {
                 margin-right: 15px;
+                
              }
             
         }
 
-        .menu-all {
-            width: auto;
+        .boxmenu {
+            width: 95%;
         }
-
-
+        
+        .btncommander {
+            margin: 50px 0 150px 0;
+        }
         
     }
     
