@@ -11,9 +11,7 @@
     display: flex;
     
 
-        &:active {
-            fill: $gradient;
-        }
+      
 
 
     svg {
@@ -57,7 +55,7 @@
       transform: scale(1);
     }
     80% {
-      fill: ease url(#grad1);
+      fill: url(#grad1);
       transform: scale(1.1);
     
     }

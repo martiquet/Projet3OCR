@@ -32,7 +32,7 @@
     transform: scaleX(0);
   }
   100% {
-    transform: scaleX(-50px);
+    transform: scaleX(50px);
   }
 }
 @keyframes slide-left2 {
@@ -100,9 +100,6 @@ ul, ol {
   position: relative;
   display: flex;
 }
-.icon:active {
-  fill: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-}
 .icon svg {
   overflow: visible;
   width: 20px;
@@ -139,7 +136,7 @@ ul, ol {
     transform: scale(1);
   }
   80% {
-    fill: ease url(#grad1);
+    fill: url(#grad1);
     transform: scale(1.1);
   }
   90% {
