@@ -197,7 +197,7 @@ ul, ol {
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
   animation: loader 0.05s;
-  animation-delay: 3s;
+  animation-delay: 4s;
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
@@ -205,42 +205,28 @@ ul, ol {
   justify-content: center;
 }
 
-.colorful {
-  top: 50%;
-  width: 24.6px;
-  height: 24.6px;
+.dot {
+  width: 50px;
+  height: 50px;
+  background: #9356DC;
+  animation: colorful-loader 0.4s infinite alternate;
   border-radius: 50%;
-  background: #9356dc;
-  animation: colorful-o7soaomd 2s infinite linear;
+  margin: 0 20px;
 }
 
-@keyframes colorful-o7soaomd {
-  0% {
-    box-shadow: 0 -33.6px #ff79da, 23.7552px -23.7552px #99e2d0, 33.6px 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
-  }
-  12.5% {
-    box-shadow: 0 0 #ff79da, 23.7552px -23.7552px #99e2d0, 33.6px 0 #ff79da, 23.7552px 23.7552px #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
-  }
-  25% {
-    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 33.6px 0 #ff79da, 23.7552px 23.7552px #99e2d0, 0 33.6px #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
-  }
-  37.5% {
-    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 23.7552px 23.7552px #99e2d0, 0 33.6px #ff79da, -23.7552px 23.7552px #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
-  }
-  50% {
-    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 33.6px #ff79da, -23.7552px 23.7552px #99e2d0, -33.6px 0 #ff79da, 0 0 #99e2d0;
-  }
-  62.5% {
-    box-shadow: 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, -23.7552px 23.7552px #99e2d0, -33.6px 0 #ff79da, -23.7552px -23.7552px #99e2d0;
-  }
-  75% {
-    box-shadow: 0 -33.6px #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, -33.6px 0 #ff79da, -23.7552px -23.7552px #99e2d0;
-  }
-  87.5% {
-    box-shadow: 0 -33.6px #ff79da, 23.7552px -23.7552px #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, -23.7552px -23.7552px #99e2d0;
-  }
+.dot2 {
+  background-color: #FF79DA;
+  animation-delay: 0.05s;
+}
+
+.dot3 {
+  animation-delay: 0.1s;
+  background-color: #99e2d0;
+}
+
+@keyframes colorful-loader {
   100% {
-    box-shadow: 0 -33.6px #ff79da, 23.7552px -23.7552px #99e2d0, 33.6px 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0, 0 0 #ff79da, 0 0 #99e2d0;
+    transform: translateY(-30px);
   }
 }
 @keyframes animenu {
