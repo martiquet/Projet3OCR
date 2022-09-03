@@ -614,9 +614,12 @@ footer a {
   .fonctionnement__list {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-right: 0;
   }
   .fonctionnement__list li {
-    margin-right: 15px;
+    width: 30%;
   }
   .boxmenu {
     width: 95%;
